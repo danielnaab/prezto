@@ -13,13 +13,15 @@ fi
 # Zsh theme
 autoload -Uz promptinit
 promptinit
-prompt paradox
+prompt agnoster
 
+autoload zmv
 
 export PATH=/usr/local/bin:~/bin:$PATH
 
 export SVN_EDITOR=vim
 export EDITOR=vim
+export VISUAL=vim
 export LESS="-R"
 
 # Use shared SSH keys for CVS authentification
@@ -35,7 +37,7 @@ export LC_CTYPE=en_US.UTF-8
 alias s="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias pw="openssl rand -base64 18 |md5 |head -c18;echo"
 alias ll='ls -Fals'
-alias d=dotcloud
+#alias d=dotcloud
 alias h=heroku
 
 # Ruby rvm
