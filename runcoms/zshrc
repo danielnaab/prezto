@@ -61,3 +61,5 @@ export PATH="$HOME/Library/Haskell/bin:$PATH"
 export NVM_DIR=~/.nvm
 echo $(brew --prefix nvm)/nvm.sh
 source $(brew --prefix nvm)/nvm.sh
+
+test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh

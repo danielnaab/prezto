@@ -37,9 +37,9 @@ zstyle ':prezto:load' pmodule \
   'homebrew' \
   'osx' \
   'git' \
-  'syntax-highlighting' \
   'history-substring-search' \
-  'prompt'
+  'prompt' \
+  'syntax-highlighting'
 
 #
 # Editor
