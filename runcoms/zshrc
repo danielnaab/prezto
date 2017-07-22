@@ -40,6 +40,7 @@ alias ll='ls -Fals'
 #alias d=dotcloud
 alias h=heroku
 alias dco=docker-compose
+alias chrome-no-web-security="open -a Google\ Chrome --args --disable-web-security --user-data-dir"
 
 # Ruby rvm
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
@@ -60,8 +61,8 @@ export PATH="$HOME/Library/Haskell/bin:$PATH"
 
 # Node Version Manager
 export NVM_DIR=~/.nvm
-echo $(brew --prefix nvm)/nvm.sh
-source $(brew --prefix nvm)/nvm.sh
+#echo $(brew --prefix nvm)/nvm.sh --no-use
+source $(brew --prefix nvm)/nvm.sh --no-use
 
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
 # Hook for desk activation
