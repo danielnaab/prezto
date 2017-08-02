@@ -57,7 +57,9 @@ source /Library/Frameworks/Python.framework/Versions/2.7/bin/virtualenvwrapper.s
 #source /Library/Frameworks/Python.framework/Versions/3.5/bin/virtualenvwrapper.sh
 
 # Haskell
-export PATH="$HOME/Library/Haskell/bin:$PATH"
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+# Java export JAVA_HOME=
 
 # Node Version Manager
 export NVM_DIR=~/.nvm
