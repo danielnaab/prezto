@@ -53,18 +53,26 @@ export PROJECT_HOME=~/git
 # the next two lines are a hack to fix python 3 version
 #export VIRTUALENVWRAPPER_LOG_DIR="$WORKON_HOME"
 #export VIRTUALENVWRAPPER_HOOK_DIR="$WORKON_HOME"
-source /Library/Frameworks/Python.framework/Versions/2.7/bin/virtualenvwrapper.sh
-#source /Library/Frameworks/Python.framework/Versions/3.5/bin/virtualenvwrapper.sh
 
-# Haskell
-export JAVA_HOME=$(/usr/libexec/java_home)
+if [[ "$OSTYPE" == darwin* ]]; then
+    source /Library/Frameworks/Python.framework/Versions/2.7/bin/virtualenvwrapper.sh
+    #source /Library/Frameworks/Python.framework/Versions/3.5/bin/virtualenvwrapper.sh
+else
+    source ~/bin/virtualenvwrapper.sh
+fi
 
-# Java export JAVA_HOME=
+if [ -z "$JAVA_HOME" ]; then
+    if [ -f /usr/libexec/java_home ]; then
+        export JAVA_HOME=$(/usr/libexec/java_home)
+    fi
+fi
 
 # Node Version Manager
 export NVM_DIR=~/.nvm
-#echo $(brew --prefix nvm)/nvm.sh --no-use
-source $(brew --prefix nvm)/nvm.sh --no-use
+if [[ "$OSTYPE" == darwin* ]]; then
+    #echo $(brew --prefix nvm)/nvm.sh --no-use
+    source $(brew --prefix nvm)/nvm.sh --no-use
+fi
 
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
 # Hook for desk activation
