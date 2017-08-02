@@ -58,7 +58,7 @@ if [[ "$OSTYPE" == darwin* ]]; then
     source /Library/Frameworks/Python.framework/Versions/2.7/bin/virtualenvwrapper.sh
     #source /Library/Frameworks/Python.framework/Versions/3.5/bin/virtualenvwrapper.sh
 else
-    source ~/bin/virtualenvwrapper.sh
+    source ~/.local/bin/virtualenvwrapper.sh
 fi
 
 if [ -z "$JAVA_HOME" ]; then
