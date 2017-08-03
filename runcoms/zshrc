@@ -5,6 +5,13 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
+# We do this here, because on the USGS network we can't set the user's
+# default shell.
+# Set SHELL to the homebrew-installed version of zsh.
+if [ -f /usr/local/bin/zsh ]; then
+    export SHELL=/usr/local/bin/zsh
+fi
+
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
@@ -75,5 +82,6 @@ if [[ "$OSTYPE" == darwin* ]]; then
 fi
 
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
+
 # Hook for desk activation
 [ -n "$DESK_ENV" ] && source "$DESK_ENV" || true
